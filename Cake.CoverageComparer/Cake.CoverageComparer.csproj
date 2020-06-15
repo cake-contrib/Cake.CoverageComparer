@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
     <Authors>Alberto Monteiro</Authors>
     <Company>Alberto Monteiro</Company>
     <Description>A simple coverage comparer that compares opecover html report</Description>
@@ -11,8 +11,8 @@
     <RepositoryUrl>https://github.com/AlbertoMonteiro/Cake.CoverageComparer</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>cake opencover coverage</PackageTags>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>Added properly namespace import of Cake.CoverageComparer</PackageReleaseNotes>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Added target to .net standard 2.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

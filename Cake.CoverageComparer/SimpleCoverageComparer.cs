@@ -10,9 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly: CakeNamespaceImport("Cake.CoverageComparer")]
 namespace Cake.CoverageComparer
 {
+    [CakeNamespaceImport("Cake.CoverageComparer")]
     public static class SimpleCoverageComparer
     {
         private static readonly CultureInfo _enUsCulture = CultureInfo.GetCultureInfo("en-US");
@@ -53,7 +53,7 @@ namespace Cake.CoverageComparer
             return doc.QuerySelector("table.overview.table-fixed.stripped");
         }
 
-        private static IEnumerable<CoveredClass> ExtractCoveredClasses(IElement table, bool isFromMaster)
+        private static IEnumerable<CoveredClass> ExtractCoveredClasses(in IElement table, in bool isFromMaster)
             => from tr in table.QuerySelectorAll("tbody tr")
                let fields = tr.QuerySelectorAll("td").ToArray()
                where fields.Length == 12
