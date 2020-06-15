@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>net48</TargetFramework>
+    <Authors>Alberto Monteiro</Authors>
+    <Company>Alberto Monteiro</Company>
+    <Description>A simple coverage comparer that compares opecover html report</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/AlbertoMonteiro/Cake.CoverageComparer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AlbertoMonteiro/Cake.CoverageComparer</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>cake opencover coverage</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0" />
+    <PackageReference Include="Cake.Core" Version="0.38.2" />
+  </ItemGroup>
+
+</Project>
