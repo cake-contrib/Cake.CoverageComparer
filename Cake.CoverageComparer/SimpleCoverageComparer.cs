@@ -10,8 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly: CakeNamespaceImport("Cake.Common.IO.Paths")]
-[assembly: CakeNamespaceImport("Cake.Common.IO")]
+[assembly: CakeNamespaceImport("Cake.CoverageComparer")]
 namespace Cake.CoverageComparer
 {
     public static class SimpleCoverageComparer
@@ -42,7 +41,7 @@ namespace Cake.CoverageComparer
                 .AppendLine("File | Current branch coverage | Upstream branch coverage | Difference")
                 .AppendLine("---- | ----------------------  | ------------------------ | ----------");
             foreach (var item in coverageResult.Where(x => x.CoverageDifference != 0))
-                sb.AppendLine($"{item.FullName} | {item.TotalCoveredCurrent:N} | {item.TotalCoveredMaster:N} | {item.CoverageDifferenceEmoji} {item.CoverageDifference / 100:P}");
+                sb.AppendLine($"{item.FullName} | {item.TotalCoveredCurrent:N} | {item.TotalCoveredMaster:N} | {item.CoverageDifference / 100:P} {item.CoverageDifferenceEmoji}");
             var result = sb.ToString();
             return result;
         }

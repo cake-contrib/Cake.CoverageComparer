@@ -9,8 +9,10 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/AlbertoMonteiro/Cake.CoverageComparer</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AlbertoMonteiro/Cake.CoverageComparer</RepositoryUrl>
-    <RepositoryType>github</RepositoryType>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>cake opencover coverage</PackageTags>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Added properly namespace import of Cake.CoverageComparer</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
