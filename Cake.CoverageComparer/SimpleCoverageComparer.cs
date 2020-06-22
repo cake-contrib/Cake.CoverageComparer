@@ -53,7 +53,7 @@ namespace Cake.CoverageComparer
             return doc.QuerySelector("table.overview.table-fixed.stripped");
         }
 
-        private static IEnumerable<CoveredClass> ExtractCoveredClasses(in IElement table, in bool isFromMaster)
+        private static IEnumerable<CoveredClass> ExtractCoveredClasses(IElement table, bool isFromMaster)
             => from tr in table.QuerySelectorAll("tbody tr")
                let fields = tr.QuerySelectorAll("td").ToArray()
                where fields.Length == 12
