@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 namespace Cake.CoverageComparer
 {
     [CakeNamespaceImport("Cake.CoverageComparer")]
+    [CakeAliasCategory("OpenCover")]
     public static class SimpleCoverageComparer
     {
         private static readonly CultureInfo _enUsCulture = CultureInfo.GetCultureInfo("en-US");
@@ -25,6 +26,7 @@ namespace Cake.CoverageComparer
         /// <param name="current">index.htm path from current branch</param>
         /// <returns>HTML table in markdown format</returns>
         [CakeMethodAlias]
+        [CakeAliasCategory("Compare")]
         public static async Task<string> CompareCoverage(this ICakeContext context, FilePath upstream, FilePath current)
         {
             var fromCurrentTable = await ExtractTableFromHtml(current.FullPath);
